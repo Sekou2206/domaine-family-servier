@@ -1,14 +1,19 @@
 # Domaine Family Servier
 
-Maquettes du site de l’élevage Domaine Family Servier (bergers australiens, Aube), en trois propositions d’identité.
+Maquettes du site de l’élevage Domaine Family Servier (bergers australiens, Aube), en quatre propositions d’identité.
 
 | Proposition | Dossier |
 | --- | --- |
+| Lignée (Héritage et Vairon, avec arbre généalogique) | `lignee/` |
 | Héritage | `heritage/` |
 | Vairon | `vairon/` |
 | Houlette | `houlette/` |
 
-La page `index.html` à la racine présente les trois propositions.
+La page `index.html` à la racine présente les quatre propositions.
+
+## Arbre généalogique
+
+Dans `lignee/index.html`, les chiens sont décrits dans l’objet `CHIENS` (nom, robe, yeux, LOF, photo, père, mère) et les portées dans `PORTEES`. Remplir un champ suffit : l’arbre, les fiches et la version mobile se mettent à jour seuls.
 
 ## Lancer en local
 
