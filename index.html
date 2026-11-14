@@ -315,6 +315,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 .arbre{background:var(--creme)}
 .arbre .toile{background:#FBF8F2}
 .choix{flex-direction:row;align-items:center;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--gris)}
+.vide-arbre{font-style:italic;color:#9A9386}
 .choix select{width:auto;min-width:260px;border:1px solid #BFB4A0;border-radius:40px;padding:10px 18px;font-size:15px;background:#fff;color:var(--encre);cursor:pointer}
 
 @media (max-width:760px){
@@ -326,6 +327,48 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 .carte-frise{margin-left:44px;padding:16px}
 .carte-frise .image{flex:1 1 100%}
 .an{font-size:34px}
+}
+
+.liste-femelles{display:flex;flex-direction:column;gap:clamp(72px,9vw,130px)}
+.sommaire-femelles{display:flex;flex-wrap:wrap;gap:10px 28px;border-top:1px solid var(--trait);border-bottom:1px solid var(--trait);padding:18px 0}
+.sommaire-femelles a{font-family:var(--serif);font-size:26px;text-decoration:none;color:var(--foret);display:flex;align-items:baseline;gap:8px}
+.sommaire-femelles a i{font-style:italic;font-size:16px;color:var(--or)}
+.sommaire-femelles a:hover{color:var(--bordeaux)}
+.femelle{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,6vw,96px);align-items:center;scroll-margin-top:30px}
+.femelle:nth-child(even){padding-top:0}
+.femelle:nth-child(even) .visuel{order:2}
+.femelle .visuel{position:relative;display:block;width:100%;aspect-ratio:4/5;overflow:hidden;padding:0;border:0;cursor:pointer;background:var(--lin);outline:1px solid var(--or);outline-offset:14px}
+.femelle .visuel img,.femelle .visuel .pelage{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.femelle .visuel:hover img{transform:scale(1.03)}
+.femelle .visuel .mono{position:absolute;inset:0;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;font-family:var(--serif);font-size:110px;color:#B5A88F}
+.femelle .visuel .mono small{font-size:18px;font-style:italic}
+.legende-photo{position:absolute;left:14px;bottom:14px;background:rgba(15,20,17,.75);color:var(--creme);font-size:13px;padding:6px 11px}
+.femelle .infos{display:flex;flex-direction:column;gap:20px;padding:0}
+.femelle .numero{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--or)}
+.femelle h3{font-size:clamp(64px,8vw,120px);line-height:.88;color:var(--foret);letter-spacing:-.01em}
+.femelle h3.vide{font-style:italic;color:#A39B8C;font-size:clamp(48px,5.5vw,80px)}
+.femelle .etiquettes{display:flex;flex-wrap:wrap;gap:8px}
+.femelle .etiquettes span{border:1px solid #BFB4A0;border-radius:30px;padding:6px 14px;font-size:14px;color:var(--texte)}
+.femelle .etiquettes span.fort{background:var(--foret);border-color:var(--foret);color:var(--creme)}
+.femelle .portrait{font-family:var(--serif);font-size:clamp(22px,2vw,28px);line-height:1.45;color:#2B2E28;max-width:560px}
+.femelle .stats{display:flex;gap:40px;border-top:1px solid var(--trait);padding-top:18px}
+.femelle .stats span{display:flex;flex-direction:column;font-size:14px;color:var(--gris)}
+.femelle .stats b{font-family:var(--serif);font-weight:400;font-size:48px;line-height:1;color:var(--bordeaux)}
+.femelle h4{margin:0;font-family:var(--serif);font-weight:500;font-size:22px;color:var(--foret)}
+.ses-portees{display:flex;flex-wrap:wrap;gap:12px}
+.ses-portees button{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--trait);padding:6px 16px 6px 6px;cursor:pointer;text-align:left;transition:border-color .2s}
+.ses-portees button:hover{border-color:var(--or)}
+.ses-portees img{width:52px;height:52px;object-fit:cover}
+.ses-portees b{display:block;font-family:var(--serif);font-weight:400;font-size:20px;color:var(--foret);line-height:1}
+.ses-portees small{font-size:13px;color:var(--gris)}
+.femelle .liens-f{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.femelle .liens-f .btn{background:var(--foret);color:var(--creme)}
+.femelle .liens-f .btn:hover{background:var(--bordeaux)}
+.enfants>.branche:only-child::after{display:none}
+@media (max-width:860px){
+.femelle{grid-template-columns:1fr}
+.femelle:nth-child(even) .visuel{order:0}
+.femelle .visuel{aspect-ratio:4/4.4}
 }
 </style>
 </head>
@@ -340,7 +383,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <span>Domaine <em>Family Servier</em></span>
 </a>
 <div class="liens">
-<a href="#chiots">Chiots disponibles</a><a href="#femelles">Nos femelles</a><a href="#male">Le mâle</a><a href="#historique">Les portées</a><a href="#arbre">La lignée</a><a href="#contact">Contact</a>
+<a href="#femelles">Nos femelles</a><a href="#male">Le mâle</a><a href="#chiots">Chiots disponibles</a><a href="#historique">Les portées</a><a href="#arbre">La lignée</a><a href="#contact">Contact</a>
 <a href="tel:+33666908711" class="tel">06 66 90 87 11</a>
 </div>
 </nav>
@@ -355,6 +398,32 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 </div>
 </div>
 </header>
+
+<section id="femelles" class="femelles">
+<div class="wrap">
+<div class="entete">
+<h2>Nos femelles,<br><em>les mamans du domaine.</em></h2>
+<p>Cinq femelles qui vivent toutes avec nous, à la maison. Chacune a son caractère, ses portées, et vous pouvez les rencontrer lors de votre visite.</p>
+</div>
+<nav class="sommaire-femelles" id="sommaireFemelles" aria-label="Les femelles"></nav>
+<div class="liste-femelles" id="grilleFemelles"></div>
+</div>
+</section>
+<section id="male" class="male">
+<div class="photo-male"><img src="assets/male-porte.webp" alt="Le mâle reproducteur du domaine, berger australien rouge, assis devant une porte rose" style="object-position:50% 40%"></div>
+<div class="texte-male">
+<span class="role">Notre mâle reproducteur</span>
+<h2>Prénom à venir</h2>
+<p class="grand">Il adore l’eau, il est très joueur, très intelligent, et surtout il adore les câlins.</p>
+<p class="corps">C’est lui le papa de toutes les portées du domaine. Un chien rouge au caractère doux, proche de l’humain, qui transmet à ses chiots son équilibre et sa joie de vivre.</p>
+<div class="chiffres" id="chiffresMale"></div>
+<div class="vignettes">
+<img src="assets/male-montagne.webp" alt="Le mâle couché dans l’herbe en montagne" style="object-position:50% 70%">
+<img src="assets/male-soleil.webp" alt="Le mâle dans un champ au coucher du soleil" style="object-position:50% 70%">
+</div>
+<div class="btns"><button type="button" class="btn" data-fiche-ouvrir="male">Sa fiche et ses portées</button></div>
+</div>
+</section>
 
 <section class="mot">
 <div class="wrap">
@@ -385,31 +454,9 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 </div>
 </section>
 
-<section id="femelles" class="femelles">
-<div class="wrap">
-<div class="entete">
-<h2>Nos femelles,<br><em>les mamans du domaine.</em></h2>
-<p>Elles vivent toutes avec nous. Chacune a son caractère, et vous pouvez les rencontrer lors de votre visite.</p>
-</div>
-<div class="grille-femelles" id="grilleFemelles"></div>
-</div>
-</section>
 
-<section id="male" class="male">
-<div class="photo-male"><img src="assets/male-porte.webp" alt="Le mâle reproducteur du domaine, berger australien rouge, assis devant une porte rose" style="object-position:50% 40%"></div>
-<div class="texte-male">
-<span class="role">Notre mâle reproducteur</span>
-<h2>Prénom à venir</h2>
-<p class="grand">Il adore l’eau, il est très joueur, très intelligent, et surtout il adore les câlins.</p>
-<p class="corps">C’est lui le papa de toutes les portées du domaine. Un chien rouge au caractère doux, proche de l’humain, qui transmet à ses chiots son équilibre et sa joie de vivre.</p>
-<div class="chiffres" id="chiffresMale"></div>
-<div class="vignettes">
-<img src="assets/male-montagne.webp" alt="Le mâle couché dans l’herbe en montagne" style="object-position:50% 70%">
-<img src="assets/male-soleil.webp" alt="Le mâle dans un champ au coucher du soleil" style="object-position:50% 70%">
-</div>
-<div class="btns"><button type="button" class="btn" data-fiche-ouvrir="male">Sa fiche et ses portées</button></div>
-</div>
-</section>
+
+
 
 <section id="historique" class="historique">
 <div class="wrap">
@@ -522,7 +569,7 @@ const ROBE_INCONNUE = "repeating-linear-gradient(45deg,#E9E2D3 0 6px,#DCD2BF 6px
 
 const CHIENS = {
 male: { nom: null, role: "Mâle reproducteur", sexe: "M", robe: "Rouge", photo: "male-porte.webp", pos: "50% 40%", texte: "Il adore l’eau, il est très joueur, très intelligent et surtout il adore les câlins. C’est le papa de toutes les portées du domaine." },
-triksy: { nom: "Triksy", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "triksy.webp", pos: "50% 60%", texte: "La princesse du domaine, maman de Tya. Quatre portées depuis janvier 2025." },
+triksy: { nom: "Triksy", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "triksy.webp", pos: "50% 60%", texte: "La princesse du domaine, maman de Tya. Trois portées depuis janvier 2025, dont neuf chiots en octobre 2026." },
 tineky: { nom: "Tineky", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "tineky.webp", pos: "60% 40%", texte: "Douce et patiente avec ses petits. Sa deuxième portée, en avril 2026, est LOF." },
 acacia: { nom: "Acacia", role: "Femelle du domaine", sexe: "F", robe: null, photo: "acacia.webp", pos: "50% 70%", texte: "La princesse Acacia a eu sa première portée au printemps 2026." },
 tya: { nom: "Tya", role: "Femelle du domaine", sexe: "F", robe: null, photo: "tya-chiots.webp", pos: "50% 50%", legende: "Ses chiots, octobre 2026", mere: "triksy", texte: "Fille de Triksy, la deuxième génération du domaine. Sa portée est née en octobre 2026." },
@@ -607,17 +654,26 @@ function cartePortee(pid) {
   return b;
 }
 
+function connus(c) {
+  return c ? [c.pere, c.mere].filter(x => x && CHIENS[x]) : [];
+}
+
 function branche(id, gen) {
   const br = el("div", "branche");
   br.appendChild(carte(id, gen));
-  const c = CHIENS[id];
-  if (gen < PROFONDEUR) {
+  const suite = connus(CHIENS[id]);
+  if (gen < PROFONDEUR && suite.length) {
     const enf = el("div", "enfants");
-    enf.appendChild(branche(c && c.pere ? c.pere : null, gen + 1));
-    enf.appendChild(branche(c && c.mere ? c.mere : null, gen + 1));
+    suite.forEach(x => enf.appendChild(branche(x, gen + 1)));
     br.appendChild(enf);
   }
   return br;
+}
+
+function profondeurMax(depart) {
+  let niveau = connus(depart), d = 0;
+  while (niveau.length && d < PROFONDEUR) { d++; niveau = niveau.flatMap(x => connus(CHIENS[x])); }
+  return d;
 }
 
 const petitEcran = window.matchMedia("(max-width:760px)");
@@ -637,21 +693,21 @@ function rendreMobile(titres) {
   tete.appendChild(PORTEES[racine] ? cartePortee(racine) : (() => { const c = carte(racine, 0); c.classList.add("gm"); c.style.width = "100%"; return c; })());
   zone.appendChild(tete);
   const depart = PORTEES[racine] || CHIENS[racine];
-  let gen = [depart.pere || null, depart.mere || null];
-  for (let g = 1; g <= PROFONDEUR; g++) {
+  let gen = connus(depart).map(id => ({ id, cote: CHIENS[id].sexe === "M" ? "père" : "mère" }));
+  for (let g = 1; g <= PROFONDEUR && gen.length; g++) {
     const sec = el("section");
     sec.appendChild(el("h5", null, esc(titres[g])));
     const grille = el("div", "gen-grille");
-    const moitie = gen.length / 2;
-    gen.forEach((id, i) => {
-      if (g > 1 && (i === 0 || i === moitie)) grille.appendChild(el("span", "cote", i === 0 ? "Côté père" : "Côté mère"));
+    let dernier = null;
+    gen.forEach(({ id, cote }) => {
+      if (g > 1 && cote !== dernier) { grille.appendChild(el("span", "cote", "Côté " + cote)); dernier = cote; }
       const c = carte(id, g);
       c.classList.add("gm");
       grille.appendChild(c);
     });
     sec.appendChild(grille);
     zone.appendChild(sec);
-    gen = gen.flatMap(id => [CHIENS[id] && CHIENS[id].pere || null, CHIENS[id] && CHIENS[id].mere || null]);
+    gen = gen.flatMap(({ id, cote }) => connus(CHIENS[id]).map(x => ({ id: x, cote: g === 1 ? (CHIENS[id].sexe === "M" ? "père" : "mère") : cote })));
   }
 }
 
@@ -665,20 +721,25 @@ function rendreArbre() {
   const racineBr = el("div", "branche g0");
   const depart = PORTEES[racine] || CHIENS[racine];
   racineBr.appendChild(PORTEES[racine] ? cartePortee(racine) : carte(racine, 0));
-  const enf = el("div", "enfants");
-  enf.appendChild(branche(depart.pere || null, 1));
-  enf.appendChild(branche(depart.mere || null, 1));
-  racineBr.appendChild(enf);
+  const suite = connus(depart);
+  if (suite.length) {
+    const enf = el("div", "enfants");
+    suite.forEach(x => enf.appendChild(branche(x, 1)));
+    racineBr.appendChild(enf);
+  }
   zone.appendChild(racineBr);
   const cols = document.getElementById("colonnes");
   cols.innerHTML = "";
+  const prof = profondeurMax(depart);
   const refs = [zone.querySelector(".branche.g0 > .carte"), ...[1, 2, 3].map(g => zone.querySelector(".carte.g" + g))];
-  titres.forEach((t, i) => {
+  titres.slice(0, prof + 1).forEach((t, i) => {
     const s = el("span", null, esc(t));
     if (refs[i]) s.style.width = refs[i].offsetWidth + "px";
     cols.appendChild(s);
   });
-  cols.style.gap = parseFloat(getComputedStyle(zone.querySelector(".enfants")).paddingLeft) + "px";
+  const e = zone.querySelector(".enfants");
+  cols.style.gap = (e ? parseFloat(getComputedStyle(e).paddingLeft) : 44) + "px";
+  if (!suite.length) cols.insertAdjacentHTML("beforeend", `<span class="vide-arbre">Parents pas encore renseignés</span>`);
   document.getElementById("defile").scrollLeft = 0;
 }
 
@@ -780,19 +841,32 @@ function rendreDispo() {
 
 function rendreFemelles() {
   const g = document.getElementById("grilleFemelles");
-  FEMELLES.forEach(id => {
+  const som = document.getElementById("sommaireFemelles");
+  FEMELLES.forEach((id, i) => {
     const c = CHIENS[id];
     const portees = porteesDe(id);
-    const derniere = portees.length ? portees[0][1].date : null;
+    const chiots = portees.reduce((t, [, p]) => t + (p.nb || 0), 0);
+    const num = String(i + 1).padStart(2, "0");
+    som.insertAdjacentHTML("beforeend", `<a href="#f-${id}"><i>${num}</i>${esc(c.nom || "Prénom à venir")}</a>`);
     const a = el("article", "femelle");
+    a.id = "f-" + id;
     const img = c.photo
       ? `<img src="${PHOTOS + c.photo}" alt="${esc(c.nom || "Femelle du domaine")}" style="object-position:${c.pos}" loading="lazy">${c.legende ? `<span class="legende-photo">${esc(c.legende)}</span>` : ""}`
-      : `<div class="pelage" style="background:${ROBE_INCONNUE}"></div><span class="mono">♀</span>`;
+      : `<div class="pelage" style="background:${ROBE_INCONNUE}"></div><span class="mono">♀<small>Photo à venir</small></span>`;
+    const tags = [`<span class="fort">Femelle</span>`, `<span>${esc(c.robe || "Robe à compléter")}</span>`];
+    if (c.mere) tags.push(`<span>Fille de ${esc(nomDe(c.mere))}</span>`);
+    if (portees.some(([, p]) => p.lof)) tags.push(`<span>Portée LOF</span>`);
+    const liste = portees.map(([pid, p]) => `<button type="button" data-portee-ouvrir="${pid}"><img src="${PHOTOS + p.photo}" alt="" style="object-position:${p.pos}"><span><b>${esc(p.date)}</b><small>${esc(p.nb ? p.nb + " chiots" : "Chiots à compter")}${p.lof ? " · LOF" : ""}</small></span></button>`).join("");
     a.innerHTML = `<button type="button" class="visuel" data-fiche-ouvrir="${id}" aria-label="Fiche de ${esc(c.nom || "la cinquième femelle")}">${img}</button>
-<div class="infos"><h3 class="${c.nom ? "" : "vide"}">${esc(c.nom || "Prénom à venir")}</h3>
-<span class="robe-txt">${esc(c.robe || "Robe à compléter")}${c.mere ? " · fille de " + esc(nomDe(c.mere)) : ""}</span>
-<span class="compte">${portees.length ? portees.length + (portees.length > 1 ? " portées" : " portée") + ", la dernière en " + esc(derniere.toLowerCase()) : "Portées à compléter"}</span></div>
-<button type="button" class="voir-lignee" data-fiche-ouvrir="${id}">Sa fiche et ses portées</button>`;
+<div class="infos">
+<span class="numero">${num} · Femelle du domaine</span>
+<h3 class="${c.nom ? "" : "vide"}">${esc(c.nom || "Prénom à venir")}</h3>
+<div class="etiquettes">${tags.join("")}</div>
+<p class="portrait">${esc(c.texte || "")}</p>
+<div class="stats"><span><b>${portees.length}</b>${portees.length > 1 ? "portées" : "portée"}</span><span><b>${chiots || "?"}</b>chiots connus</span><span><b>${portees.length ? esc(portees[0][1].date.split(" ")[1]) : "?"}</b>dernière portée</span></div>
+${portees.length ? `<h4>Ses portées</h4><div class="ses-portees">${liste}</div>` : ""}
+<div class="liens-f"><button type="button" class="btn" data-fiche-ouvrir="${id}">Sa fiche complète</button>${portees.length ? `<button type="button" class="voir-lignee" data-racine="${portees[0][0]}">Voir l’arbre de sa dernière portée</button>` : ""}</div>
+</div>`;
     g.appendChild(a);
   });
 }
