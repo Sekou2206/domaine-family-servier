@@ -330,6 +330,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 }
 
 .liste-femelles{display:flex;flex-direction:column;gap:clamp(72px,9vw,130px)}
+.pas-encore{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--bordeaux);border-top:1px solid var(--trait);padding-top:18px}
 .sommaire-femelles{display:flex;flex-wrap:wrap;gap:10px 28px;border-top:1px solid var(--trait);border-bottom:1px solid var(--trait);padding:18px 0}
 .sommaire-femelles a{font-family:var(--serif);font-size:26px;text-decoration:none;color:var(--foret);display:flex;align-items:baseline;gap:8px}
 .sommaire-femelles a i{font-style:italic;font-size:16px;color:var(--or)}
@@ -390,7 +391,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <div class="wrap bas">
 <h1>Élevés à la maison,<br><em>aimés pour la vie.</em></h1>
 <div class="cote">
-<p>Bergers australiens nés et élevés en famille, dans l’Aube. Cinq mamans, un papa, et une lignée que l’on vous raconte en entier.</p>
+<p>Bergers australiens nés et élevés en famille, dans l’Aube. Cinq femelles, un mâle, et une lignée que l’on vous raconte en entier.</p>
 <div class="btns">
 <a href="#chiots" class="btn">Voir les chiots disponibles</a>
 <a href="#arbre" class="lien-serif">Leur arbre</a>
@@ -573,7 +574,7 @@ triksy: { nom: "Triksy", role: "Femelle du domaine", sexe: "F", robe: "Noir tric
 tineky: { nom: "Tineky", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "tineky.webp", pos: "60% 40%", texte: "Douce et patiente avec ses petits. Sa deuxième portée, en avril 2026, est LOF." },
 acacia: { nom: "Acacia", role: "Femelle du domaine", sexe: "F", robe: null, photo: "acacia.webp", pos: "50% 70%", texte: "La princesse Acacia a eu sa première portée au printemps 2026." },
 tya: { nom: "Tya", role: "Femelle du domaine", sexe: "F", robe: null, photo: "tya-chiots.webp", pos: "50% 50%", legende: "Ses chiots, octobre 2026", mere: "triksy", texte: "Fille de Triksy, la deuxième génération du domaine. Sa portée est née en octobre 2026." },
-femelle5: { nom: null, role: "Femelle du domaine", sexe: "F", robe: null, photo: null, texte: "Photo, prénom et portées à compléter." },
+akira: { nom: "Akira", role: "Femelle du domaine", sexe: "F", robe: null, photo: null, pere: "male", mere: "tineky", portee: "p2025tineky", texte: "La petite dernière du domaine, fille de Tineky. Elle commence tout juste sa vie de future maman et n’a pas encore eu de portée." },
 
 d1: { nom: "Chiot 01", role: "Chiot disponible", robe: "Rouge tricolore", photo: "dispo-1.webp", pos: "35% 60%", statut: "Disponible", pere: "male", groupe: "oct2026" },
 d2: { nom: "Chiot 02", role: "Chiot disponible", robe: "Bleu merle", photo: "dispo-2.webp", pos: "45% 40%", statut: "Disponible", pere: "male", groupe: "oct2026" },
@@ -590,7 +591,6 @@ acacia_fille: { nom: "Fille d’Acacia", role: "Chiot", sexe: "F", robe: "Rouge 
 aika: { nom: "Aika", role: "Chiot", sexe: "M", robe: null, photo: "aika.webp", pos: "50% 60%", pere: "male", mere: "triksy", portee: "p2025sept", texte: "Petite chipie très intelligente qui a peur du balai, heureux en famille." },
 ayden: { nom: "Ayden", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "ayden.webp", pos: "50% 40%", pere: "male", mere: "tineky", portee: "p2025tineky" },
 audi: { nom: "Audi", role: "Chiot", sexe: "M", robe: "Noir tricolore", photo: "audi.webp", pos: "50% 30%", pere: "male", mere: "tineky", portee: "p2025tineky", texte: "Le petit chouchou de la portée, parti dans une famille qui le gâte." },
-akira: { nom: "Akira", role: "Chiot", sexe: "F", robe: null, photo: null, pere: "male", mere: "tineky", portee: "p2025tineky" },
 volt: { nom: "Volt", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "volt.webp", pos: "50% 40%", pere: "male", mere: "triksy", portee: "p2025jan" },
 oka: { nom: "Oka", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "oka.webp", pos: "50% 30%", pere: "male", mere: "triksy", portee: "p2025jan", texte: "Le solitaire de la portée." },
 vanille: { nom: "Vanille", role: "Chiot", sexe: "F", robe: "Bleu merle", photo: "vanille.webp", pos: "50% 30%", pere: "male", mere: "triksy", portee: "p2025jan" },
@@ -608,7 +608,7 @@ p2025tineky: { nom: "Portée de Tineky", date: "Hiver 2025", mere: "tineky", per
 p2025jan: { nom: "Portée de Triksy", date: "Janvier 2025", mere: "triksy", pere: "male", nb: null, photo: "p2025-triksy.webp", pos: "50% 50%", texte: "Les premiers chiots de Triksy au domaine.", chiots: ["volt", "oka", "vanille", "noisette", "aquarelle"] }
 };
 
-const FEMELLES = ["triksy", "tineky", "acacia", "tya", "femelle5"];
+const FEMELLES = ["tineky", "triksy", "acacia", "tya", "akira"];
 const DISPO = ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8"];
 
 const PROFONDEUR = 3;
@@ -863,7 +863,7 @@ function rendreFemelles() {
 <h3 class="${c.nom ? "" : "vide"}">${esc(c.nom || "Prénom à venir")}</h3>
 <div class="etiquettes">${tags.join("")}</div>
 <p class="portrait">${esc(c.texte || "")}</p>
-<div class="stats"><span><b>${portees.length}</b>${portees.length > 1 ? "portées" : "portée"}</span><span><b>${chiots || "?"}</b>chiots connus</span><span><b>${portees.length ? esc(portees[0][1].date.split(" ")[1]) : "?"}</b>dernière portée</span></div>
+${portees.length ? `<div class="stats"><span><b>${portees.length}</b>${portees.length > 1 ? "portées" : "portée"}</span><span><b>${chiots || "?"}</b>chiots connus</span><span><b>${esc(portees[0][1].date.split(" ")[1])}</b>dernière portée</span></div>` : `<p class="pas-encore">Pas encore de portée. Ses premiers chiots seront annoncés ici.</p>`}
 ${portees.length ? `<h4>Ses portées</h4><div class="ses-portees">${liste}</div>` : ""}
 <div class="liens-f"><button type="button" class="btn" data-fiche-ouvrir="${id}">Sa fiche complète</button>${portees.length ? `<button type="button" class="voir-lignee" data-racine="${portees[0][0]}">Voir l’arbre de sa dernière portée</button>` : ""}</div>
 </div>`;
