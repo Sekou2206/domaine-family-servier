@@ -248,6 +248,85 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 .photos figure:nth-child(even){padding-top:0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.btn-clair{background:transparent;color:var(--creme);border:1px solid rgba(243,238,227,.5)}
+.btn-clair:hover{background:var(--creme);color:var(--foret)}
+.portee .btns{padding-top:8px}
+.chiot .photo{display:block;width:100%;padding:0;border:0;cursor:pointer}
+.carte .bande{display:block;margin-top:6px;height:70px;overflow:hidden}
+.carte .bande img{width:100%;height:100%;object-fit:cover}
+
+.femelles .wrap{padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:56px}
+.femelles h2{font-size:clamp(46px,5.4vw,84px);line-height:.95;color:var(--foret)}
+.femelles h2 em{color:var(--bordeaux)}
+.femelles .entete p{color:var(--texte)}
+.grille-femelles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:40px 22px}
+.femelle{display:flex;flex-direction:column;gap:14px}
+.femelle:nth-child(even){padding-top:48px}
+.femelle .visuel{position:relative;display:block;width:100%;aspect-ratio:3/4;overflow:hidden;padding:0;border:0;cursor:pointer;background:var(--lin);outline:1px solid var(--or);outline-offset:8px}
+.femelle .visuel img,.femelle .visuel .pelage{width:100%;height:100%;object-fit:cover;transition:transform .7s ease}
+.femelle .visuel:hover img{transform:scale(1.04)}
+.femelle .visuel .mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:80px;color:#B5A88F}
+.legende-photo{position:absolute;left:10px;bottom:10px;background:rgba(15,20,17,.72);color:var(--creme);font-size:12px;padding:5px 9px}
+.femelle .infos{display:flex;flex-direction:column;gap:5px;padding-top:10px}
+.femelle h3{font-size:40px;line-height:1;color:var(--foret)}
+.femelle h3.vide{font-style:italic;color:#9A9386;font-size:32px}
+.robe-txt{font-size:14px;color:var(--gris)}
+.compte{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--bordeaux)}
+.femelle .voir-lignee,.historique .voir-lignee{color:var(--foret)}
+
+.male{display:flex;flex-wrap:wrap;background:var(--nuit);color:var(--creme)}
+.photo-male{flex:1 1 560px;min-height:clamp(480px,50vw,820px);position:relative;overflow:hidden}
+.photo-male img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.texte-male{flex:1 1 440px;padding:clamp(40px,7vw,110px) clamp(24px,5vw,80px);display:flex;flex-direction:column;gap:24px;justify-content:center}
+.texte-male .role{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--cuivre)}
+.texte-male h2{font-size:clamp(46px,5vw,78px);line-height:.95;font-style:italic;color:#C9BFA9}
+.texte-male .grand{font-family:var(--serif);font-size:clamp(26px,2.4vw,34px);line-height:1.3;color:var(--creme)}
+.texte-male .corps{color:#C9CFC6;max-width:520px}
+.chiffres{display:flex;flex-wrap:wrap;gap:36px;border-top:1px solid rgba(194,160,106,.4);padding-top:22px}
+.chiffres span{display:flex;flex-direction:column;font-size:14px;color:#C9CFC6}
+.chiffres b{font-family:var(--serif);font-weight:400;font-size:52px;line-height:1;color:var(--or2)}
+.vignettes{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px}
+.vignettes img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+.historique{background:var(--lin)}
+.historique .wrap{padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:56px}
+.historique h2{font-size:clamp(46px,5.4vw,84px);line-height:.95;color:var(--foret)}
+.historique h2 em{color:var(--bordeaux)}
+.historique .entete p{color:var(--texte)}
+.frise{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;position:relative}
+.frise::before{content:"";position:absolute;left:150px;top:10px;bottom:10px;border-left:1px solid var(--or)}
+.etape{display:grid;grid-template-columns:150px 1fr;gap:0;padding:0 0 44px}
+.quand{display:flex;flex-direction:column;align-items:flex-end;padding:6px 34px 0 0;position:relative}
+.quand::after{content:"";position:absolute;right:-6px;top:22px;width:11px;height:11px;border-radius:50%;background:var(--bordeaux);box-shadow:0 0 0 5px var(--lin)}
+.mois{font-family:var(--serif);font-style:italic;font-size:26px;line-height:1;color:var(--bordeaux)}
+.an{font-family:var(--serif);font-size:46px;line-height:1;color:var(--foret)}
+.carte-frise{margin-left:40px;display:flex;flex-wrap:wrap;gap:28px;background:var(--creme);padding:22px;border:1px solid var(--trait)}
+.carte-frise .image{flex:0 0 220px;aspect-ratio:4/3;overflow:hidden;padding:0;border:0;cursor:pointer}
+.carte-frise .image img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.carte-frise .image:hover img{transform:scale(1.05)}
+.corps-frise{flex:1 1 300px;display:flex;flex-direction:column;gap:10px}
+.corps-frise h3{font-size:34px;line-height:1;color:var(--foret)}
+.lof{font-family:var(--sans);font-size:12px;letter-spacing:.1em;background:var(--foret);color:var(--or2);padding:3px 8px;vertical-align:middle}
+.parents-frise{font-size:15px;color:var(--gris)}
+.parents-frise button{background:none;border:0;padding:0;font:inherit;color:var(--bordeaux);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.texte-frise{font-size:16px;line-height:1.6;color:var(--texte)}
+.noms{display:flex;flex-wrap:wrap;gap:8px}
+
+.arbre{background:var(--creme)}
+.arbre .toile{background:#FBF8F2}
+.choix{flex-direction:row;align-items:center;gap:14px;flex-wrap:wrap;font-size:14px;color:var(--gris)}
+.choix select{width:auto;min-width:260px;border:1px solid #BFB4A0;border-radius:40px;padding:10px 18px;font-size:15px;background:#fff;color:var(--encre);cursor:pointer}
+
+@media (max-width:760px){
+.femelle:nth-child(even){padding-top:0}
+.frise::before{left:18px}
+.etape{grid-template-columns:1fr}
+.quand{flex-direction:row;align-items:baseline;gap:10px;padding:0 0 12px 44px}
+.quand::after{left:13px;right:auto;top:10px}
+.carte-frise{margin-left:44px;padding:16px}
+.carte-frise .image{flex:1 1 100%}
+.an{font-size:34px}
+}
 </style>
 </head>
 <body>
@@ -261,16 +340,16 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <span>Domaine <em>Family Servier</em></span>
 </a>
 <div class="liens">
-<a href="#portee">La portée</a><a href="#parents">Les parents</a><a href="#arbre">La lignée</a><a href="#adoption">Adopter</a><a href="#contact">Nous rendre visite</a>
+<a href="#chiots">Chiots disponibles</a><a href="#femelles">Nos femelles</a><a href="#male">Le mâle</a><a href="#historique">Les portées</a><a href="#arbre">La lignée</a><a href="#contact">Contact</a>
 <a href="tel:+33666908711" class="tel">06 66 90 87 11</a>
 </div>
 </nav>
 <div class="wrap bas">
 <h1>Élevés à la maison,<br><em>aimés pour la vie.</em></h1>
 <div class="cote">
-<p>Bergers australiens nés et élevés en famille, dans l’Aube. Peu de portées, beaucoup d’attention, et une lignée que l’on vous raconte en entier.</p>
+<p>Bergers australiens nés et élevés en famille, dans l’Aube. Cinq mamans, un papa, et une lignée que l’on vous raconte en entier.</p>
 <div class="btns">
-<a href="#portee" class="btn">Voir la portée</a>
+<a href="#chiots" class="btn">Voir les chiots disponibles</a>
 <a href="#arbre" class="lien-serif">Leur arbre</a>
 </div>
 </div>
@@ -280,8 +359,8 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <section class="mot">
 <div class="wrap">
 <figure>
-<div class="cadre"><img src="assets/fb47.webp" alt="La mère allongée avec ses chiots nouveau nés" style="object-position:40% 50%"></div>
-<figcaption>La maman et sa portée, les premiers jours.</figcaption>
+<div class="cadre"><img src="assets/triksy-portee.webp" alt="Triksy couchée avec ses chiots nouveau nés, octobre 2026" style="object-position:50% 50%"></div>
+<figcaption>Triksy et sa portée, octobre 2026.</figcaption>
 </figure>
 <div class="texte">
 <h2>Le mot de la famille</h2>
@@ -292,30 +371,54 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 </div>
 </section>
 
-<section class="bandeau">
-<img src="assets/fb63.webp" alt="Chiot dans un pré fleuri sous les arbres">
-<div class="wrap"><p>Un berger australien ne s’achète pas. Il se confie.</p></div>
-</section>
-
-<section id="portee" class="portee">
+<section id="chiots" class="portee">
 <div class="wrap">
 <div class="entete">
-<h2>La portée,<br><em>six regards.</em></h2>
-<p>Six chiots, six caractères. Chaque famille est accompagnée pour choisir celui qui lui correspond vraiment, et peut consulter sa lignée complète.</p>
+<h2>Les chiots,<br><em>disponibles maintenant.</em></h2>
+<p>Nés en octobre 2026 chez Triksy et chez sa fille Tya. Leurs premières sorties au jardin datent de novembre : ils sont prêts à rencontrer leur famille.</p>
 </div>
-<div class="grille" id="grillePortee"></div>
+<div class="grille" id="grilleDispo"></div>
+<div class="btns">
+<button type="button" class="btn" data-racine="p2026triksy">Lignée de la portée de Triksy</button>
+<button type="button" class="btn btn-clair" data-racine="p2026tya">Lignée de la portée de Tya</button>
+</div>
 </div>
 </section>
 
-<section id="parents" class="parents">
-<article class="parent">
-<img src="assets/fb71.webp" alt="La mère, tricolore noire aux yeux vairons" style="object-position:30% 50%">
-<div class="info"><span class="role">La mère</span><h3>Prénom à venir</h3><p>Tricolore noire aux yeux vairons. Douce, attentive, une maman exemplaire.</p><button class="voir-lignee" data-racine="mere">Voir sa lignée</button></div>
-</article>
-<article class="parent">
-<img src="assets/fb105.webp" alt="Le père, berger australien rouge" style="object-position:50% 28%">
-<div class="info"><span class="role">Le père</span><h3>Prénom à venir</h3><p>Rouge, joueur et sociable. Toujours le premier à accueillir les visiteurs.</p><button class="voir-lignee" data-racine="pere">Voir sa lignée</button></div>
-</article>
+<section id="femelles" class="femelles">
+<div class="wrap">
+<div class="entete">
+<h2>Nos femelles,<br><em>les mamans du domaine.</em></h2>
+<p>Elles vivent toutes avec nous. Chacune a son caractère, et vous pouvez les rencontrer lors de votre visite.</p>
+</div>
+<div class="grille-femelles" id="grilleFemelles"></div>
+</div>
+</section>
+
+<section id="male" class="male">
+<div class="photo-male"><img src="assets/male-porte.webp" alt="Le mâle reproducteur du domaine, berger australien rouge, assis devant une porte rose" style="object-position:50% 40%"></div>
+<div class="texte-male">
+<span class="role">Notre mâle reproducteur</span>
+<h2>Prénom à venir</h2>
+<p class="grand">Il adore l’eau, il est très joueur, très intelligent, et surtout il adore les câlins.</p>
+<p class="corps">C’est lui le papa de toutes les portées du domaine. Un chien rouge au caractère doux, proche de l’humain, qui transmet à ses chiots son équilibre et sa joie de vivre.</p>
+<div class="chiffres" id="chiffresMale"></div>
+<div class="vignettes">
+<img src="assets/male-montagne.webp" alt="Le mâle couché dans l’herbe en montagne" style="object-position:50% 70%">
+<img src="assets/male-soleil.webp" alt="Le mâle dans un champ au coucher du soleil" style="object-position:50% 70%">
+</div>
+<div class="btns"><button type="button" class="btn" data-fiche-ouvrir="male">Sa fiche et ses portées</button></div>
+</div>
+</section>
+
+<section id="historique" class="historique">
+<div class="wrap">
+<div class="entete">
+<h2>L’historique<br><em>des portées.</em></h2>
+<p>Toutes les naissances du domaine, de la plus récente à la plus ancienne. Chaque portée est reliée à son arbre généalogique.</p>
+</div>
+<ol class="frise" id="frise"></ol>
+</div>
 </section>
 
 <section id="arbre" class="arbre">
@@ -324,7 +427,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <h2>L’arbre <em>de la famille</em></h2>
 <p>Qui sont les parents, les aïeux, d’où vient la robe ou le regard d’un chiot : toute la lignée est ici. Touchez un chien pour ouvrir sa fiche.</p>
 </div>
-<div class="racines" id="racines"><span>Afficher l’arbre de</span></div>
+<label class="choix">Afficher l’arbre de<select id="choixRacine"></select></label>
 <div class="toile">
 <div class="colonnes" id="colonnes"></div>
 <div class="defile" id="defile"><div id="arbreRendu"></div></div>
@@ -338,10 +441,10 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <div class="wrap">
 <h2>Huit semaines <em>avant de partir</em></h2>
 <ol>
-<li><div><img src="assets/fb42.webp" alt="Chiot nouveau né merle" style="object-position:50% 50%"></div><span>La naissance</span><p>Au calme, à la maison, contre leur mère.</p></li>
-<li><div><img src="assets/fb20.webp" alt="Deux chiots tricolores qui jouent dans l’herbe"></div><span>Les premiers pas dehors</span><p>L’herbe, le soleil, les jeux entre frères et sœurs.</p></li>
-<li><div><img src="assets/fb23.webp" alt="Deux chiots assis côte à côte" style="object-position:50% 45%"></div><span>Les caractères</span><p>On apprend à les connaître, un par un.</p></li>
-<li><div><img src="assets/fb98.webp" alt="Portrait d’un chiot bleu merle"></div><span>Le départ</span><p>Avec ses papiers, son carnet de santé, ses repères et son arbre généalogique.</p></li>
+<li><div><img src="assets/p2025-triksy-sept.webp" alt="Chiot merle nouveau né endormi"></div><span>La naissance</span><p>Au calme, à la maison, contre leur mère.</p></li>
+<li><div><img src="assets/dispo-4.webp" alt="Chiot dans sa caisse avec une peluche" style="object-position:40% 50%"></div><span>Les premières semaines</span><p>Les yeux s’ouvrent, les caractères se dessinent.</p></li>
+<li><div><img src="assets/dispo-1.webp" alt="Chiot rouge tricolore lors de sa première sortie au jardin" style="object-position:40% 60%"></div><span>Les premiers pas dehors</span><p>L’herbe, le froid, les jeux entre frères et sœurs.</p></li>
+<li><div><img src="assets/audi.webp" alt="Audi, fils de Tineky, dans sa nouvelle famille"></div><span>Le départ</span><p>Avec ses papiers, son carnet de santé, ses repères et son arbre généalogique.</p></li>
 </ol>
 </div>
 </section>
@@ -351,7 +454,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <h2>Comment se passe <em>une adoption ?</em></h2>
 <div class="cols">
 <p>Tout commence par un appel ou un message. On parle de votre maison, de votre rythme, de vos enfants s’il y en a, de ce que vous imaginez vivre avec un berger australien. C’est un chien formidable, mais il demande du temps et de l’activité : on préfère être honnêtes dès le début.</p>
-<p>Ensuite, vous venez au domaine, sur réservation. Vous rencontrez les parents, la portée, et vous voyez où et comment les chiots grandissent.</p>
+<p>Ensuite, vous venez au domaine, sur réservation. Vous rencontrez les mamans, le papa, la portée, et vous voyez où et comment les chiots grandissent.</p>
 <p>Le choix du chiot se fait ensemble, selon son caractère et le vôtre. Il part à partir de 8 semaines, avec ses documents, son carnet de santé, sa lignée et un petit livret pour ses premiers jours chez vous.</p>
 <p>Et après ? On reste là. Pour une question d’éducation, un doute sur l’alimentation, ou simplement pour recevoir une photo de lui qui a bien grandi.</p>
 </div>
@@ -365,10 +468,10 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <span>Toute la vie du domaine sur <a href="#">Instagram</a> et <a href="https://www.facebook.com/profile.php?id=61572334057087">Facebook</a></span>
 </div>
 <div class="photos">
-<figure><div><img src="assets/fb64.webp" alt="Chiot bleu merle dans les fleurs" style="object-position:50% 45%"></div><figcaption>Dans les fleurs.</figcaption></figure>
-<figure><div><img src="assets/fb78.webp" alt="Chiot rouge merle aux yeux bleus" style="object-position:50% 45%"></div><figcaption>Un œil bleu, un regard qui ne vous quitte plus.</figcaption></figure>
-<figure><div><img src="assets/fb104.webp" alt="Berger australien bleu merle adulte" style="object-position:45% 30%"></div><figcaption>Devenu grand, et toujours aussi beau.</figcaption></figure>
-<figure><div><img src="assets/fb106.webp" alt="Berger australien rouge adulte dans l’herbe" style="object-position:50% 35%"></div><figcaption>La relève du domaine.</figcaption></figure>
+<figure><div><img src="assets/chiots-dehors.webp" alt="Les chiots jouent ensemble dans le jardin" style="object-position:40% 50%"></div><figcaption>Première sortie, il faisait froid mais ils ont été très courageux.</figcaption></figure>
+<figure><div><img src="assets/ayden.webp" alt="Ayden dans les bras de sa nouvelle famille"></div><figcaption>Ayden, fils de Tineky, avec sa nouvelle famille.</figcaption></figure>
+<figure><div><img src="assets/vanille.webp" alt="Vanille, fille de Triksy, bleu merle"></div><figcaption>Vanille, fille de Triksy. Wouah.</figcaption></figure>
+<figure><div><img src="assets/tineky-fils.webp" alt="Le fils de Tineky, bleu merle" style="object-position:50% 35%"></div><figcaption>Le fils de Tineky, portée d’avril 2026.</figcaption></figure>
 </div>
 </div>
 </section>
@@ -385,7 +488,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <label>Votre nom<input type="text" autocomplete="name"></label>
 <label>Téléphone<input type="tel" autocomplete="tel"></label>
 <label class="plein">Adresse mail<input type="email" autocomplete="email"></label>
-<label class="plein">Votre projet<select><option>Réserver un chiot de la portée actuelle</option><option>Être prévenu de la prochaine portée</option><option>Visiter le domaine</option></select></label>
+<label class="plein">Votre projet<select><option>Réserver un chiot disponible</option><option>Être prévenu de la prochaine portée</option><option>Visiter le domaine</option></select></label>
 <label class="plein">Quelques mots sur vous<textarea rows="4"></textarea></label>
 <button type="submit">Envoyer ma demande</button>
 </form>
@@ -400,7 +503,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 </footer>
 
 <div class="voile-fiche" id="voileFiche"></div>
-<aside class="fiche" id="fiche" aria-hidden="true" aria-label="Fiche du chien" role="dialog">
+<aside class="fiche" id="fiche" aria-hidden="true" aria-label="Fiche" role="dialog">
 <div class="haut" id="ficheHaut"><button class="fermer" id="fermerFiche" aria-label="Fermer la fiche">×</button></div>
 <div class="contenu" id="ficheContenu"></div>
 </aside>
@@ -413,48 +516,67 @@ const ROBES = {
 "Rouge merle": "radial-gradient(circle at 32% 38%,#8A4A2A 0 14%,transparent 15%),radial-gradient(circle at 66% 62%,#8A4A2A 0 12%,transparent 13%),linear-gradient(135deg,#E7C7AE,#C99A78)",
 "Noir tricolore": "linear-gradient(180deg,#1B1B1D 0 58%,#B8702F 58% 76%,#F1ECE3 76%)",
 "Rouge tricolore": "linear-gradient(180deg,#8C4A28 0 58%,#D9A066 58% 76%,#F1ECE3 76%)",
-"Rouge": "linear-gradient(160deg,#B4622F,#7E3A1C)",
-"Noir": "linear-gradient(160deg,#2A2A2C,#0E0E10)"
+"Rouge": "linear-gradient(160deg,#B4622F,#7E3A1C)"
 };
 const ROBE_INCONNUE = "repeating-linear-gradient(45deg,#E9E2D3 0 6px,#DCD2BF 6px 12px)";
 
 const CHIENS = {
-mere: { nom: null, role: "La mère", sexe: "F", robe: "Noir tricolore", yeux: "Vairons", photo: "fb71.webp", pos: "30% 50%", pere: "mere_p", mere: "mere_m", texte: "Douce, attentive, une maman exemplaire. Elle vit à la maison avec nous." },
-pere: { nom: null, role: "Le père", sexe: "M", robe: "Rouge", yeux: null, photo: "fb105.webp", pos: "50% 28%", pere: "pere_p", mere: "pere_m", texte: "Joueur et sociable. Toujours le premier à accueillir les visiteurs." },
-mere_p: { role: "Père de la mère", sexe: "M", pere: "mere_p_p", mere: "mere_p_m" },
-mere_m: { role: "Mère de la mère", sexe: "F", pere: "mere_m_p", mere: "mere_m_m" },
-pere_p: { role: "Père du père", sexe: "M", pere: "pere_p_p", mere: "pere_p_m" },
-pere_m: { role: "Mère du père", sexe: "F", pere: "pere_m_p", mere: "pere_m_m" },
-mere_p_p: { role: "Aïeul côté mère", sexe: "M" }, mere_p_m: { role: "Aïeule côté mère", sexe: "F" },
-mere_m_p: { role: "Aïeul côté mère", sexe: "M" }, mere_m_m: { role: "Aïeule côté mère", sexe: "F" },
-pere_p_p: { role: "Aïeul côté père", sexe: "M" }, pere_p_m: { role: "Aïeule côté père", sexe: "F" },
-pere_m_p: { role: "Aïeul côté père", sexe: "M" }, pere_m_m: { role: "Aïeule côté père", sexe: "F" },
-c1: { nom: "N° 1", role: "Chiot de la portée", sexe: null, robe: "Bleu merle", photo: "fb16.webp", pos: "48% 62%", zoom: 1.55, statut: "Disponible", pere: "pere", mere: "mere", portee: "p2026" },
-c2: { nom: "N° 2", role: "Chiot de la portée", sexe: null, robe: "Rouge tricolore", photo: "fb27.webp", pos: "50% 45%", statut: "Réservé", pere: "pere", mere: "mere", portee: "p2026" },
-c3: { nom: "N° 3", role: "Chiot de la portée", sexe: null, robe: "Bleu merle", photo: "fb31.webp", pos: "50% 40%", statut: "Disponible", pere: "pere", mere: "mere", portee: "p2026" },
-c4: { nom: "N° 4", role: "Chiot de la portée", sexe: null, robe: "Noir tricolore", photo: "fb14.webp", pos: "50% 40%", statut: "Réservé", pere: "pere", mere: "mere", portee: "p2026" },
-c5: { nom: "N° 5", role: "Chiot de la portée", sexe: null, robe: "Rouge merle", photo: "fb37.webp", pos: "55% 35%", statut: "Disponible", pere: "pere", mere: "mere", portee: "p2026" },
-c6: { nom: "N° 6", role: "Chiot de la portée", sexe: null, robe: "Rouge tricolore", photo: "fb36.webp", pos: "50% 40%", statut: "Disponible", pere: "pere", mere: "mere", portee: "p2026" }
+male: { nom: null, role: "Mâle reproducteur", sexe: "M", robe: "Rouge", photo: "male-porte.webp", pos: "50% 40%", texte: "Il adore l’eau, il est très joueur, très intelligent et surtout il adore les câlins. C’est le papa de toutes les portées du domaine." },
+triksy: { nom: "Triksy", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "triksy.webp", pos: "50% 60%", texte: "La princesse du domaine, maman de Tya. Quatre portées depuis janvier 2025." },
+tineky: { nom: "Tineky", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "tineky.webp", pos: "60% 40%", texte: "Douce et patiente avec ses petits. Sa deuxième portée, en avril 2026, est LOF." },
+acacia: { nom: "Acacia", role: "Femelle du domaine", sexe: "F", robe: null, photo: "acacia.webp", pos: "50% 70%", texte: "La princesse Acacia a eu sa première portée au printemps 2026." },
+tya: { nom: "Tya", role: "Femelle du domaine", sexe: "F", robe: null, photo: "tya-chiots.webp", pos: "50% 50%", legende: "Ses chiots, octobre 2026", mere: "triksy", texte: "Fille de Triksy, la deuxième génération du domaine. Sa portée est née en octobre 2026." },
+femelle5: { nom: null, role: "Femelle du domaine", sexe: "F", robe: null, photo: null, texte: "Photo, prénom et portées à compléter." },
+
+d1: { nom: "Chiot 01", role: "Chiot disponible", robe: "Rouge tricolore", photo: "dispo-1.webp", pos: "35% 60%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d2: { nom: "Chiot 02", role: "Chiot disponible", robe: "Bleu merle", photo: "dispo-2.webp", pos: "45% 40%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d3: { nom: "Chiot 03", role: "Chiot disponible", robe: "Noir tricolore", photo: "dispo-3.webp", pos: "40% 55%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d4: { nom: "Chiot 04", role: "Chiot disponible", robe: "Rouge tricolore", photo: "dispo-4.webp", pos: "40% 55%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d5: { nom: "Chiot 05", role: "Chiot disponible", robe: "Noir tricolore", photo: "dispo-5.webp", pos: "40% 55%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d6: { nom: "Chiot 06", role: "Chiot disponible", robe: "Bleu merle", photo: "dispo-6.webp", pos: "55% 55%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d7: { nom: "Chiot 07", role: "Chiot disponible", robe: "Noir tricolore", photo: "dispo-7.webp", pos: "55% 50%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+d8: { nom: "Chiot 08", role: "Chiot disponible", robe: "Bleu merle", photo: "dispo-8.webp", pos: "55% 45%", statut: "Disponible", pere: "male", groupe: "oct2026" },
+
+tineky_fils: { nom: "Fils de Tineky", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "tineky-fils.webp", pos: "50% 35%", pere: "male", mere: "tineky", portee: "p2026tineky" },
+acacia_fils: { nom: "Fils d’Acacia", role: "Chiot", sexe: "M", robe: "Rouge tricolore", photo: "acacia-fils.webp", pos: "50% 40%", pere: "male", mere: "acacia", portee: "p2026acacia" },
+acacia_fille: { nom: "Fille d’Acacia", role: "Chiot", sexe: "F", robe: "Rouge merle", photo: "acacia-fille.webp", pos: "50% 50%", pere: "male", mere: "acacia", portee: "p2026acacia" },
+aika: { nom: "Aika", role: "Chiot", sexe: "M", robe: null, photo: "aika.webp", pos: "50% 60%", pere: "male", mere: "triksy", portee: "p2025sept", texte: "Petite chipie très intelligente qui a peur du balai, heureux en famille." },
+ayden: { nom: "Ayden", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "ayden.webp", pos: "50% 40%", pere: "male", mere: "tineky", portee: "p2025tineky" },
+audi: { nom: "Audi", role: "Chiot", sexe: "M", robe: "Noir tricolore", photo: "audi.webp", pos: "50% 30%", pere: "male", mere: "tineky", portee: "p2025tineky", texte: "Le petit chouchou de la portée, parti dans une famille qui le gâte." },
+akira: { nom: "Akira", role: "Chiot", sexe: "F", robe: null, photo: null, pere: "male", mere: "tineky", portee: "p2025tineky" },
+volt: { nom: "Volt", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "volt.webp", pos: "50% 40%", pere: "male", mere: "triksy", portee: "p2025jan" },
+oka: { nom: "Oka", role: "Chiot", sexe: "M", robe: "Bleu merle", photo: "oka.webp", pos: "50% 30%", pere: "male", mere: "triksy", portee: "p2025jan", texte: "Le solitaire de la portée." },
+vanille: { nom: "Vanille", role: "Chiot", sexe: "F", robe: "Bleu merle", photo: "vanille.webp", pos: "50% 30%", pere: "male", mere: "triksy", portee: "p2025jan" },
+noisette: { nom: "Noisette", role: "Chiot", sexe: "M", robe: null, photo: null, pere: "male", mere: "triksy", portee: "p2025jan" },
+aquarelle: { nom: "Aquarelle", role: "Chiot", sexe: "F", robe: null, photo: "aquarelle.webp", pos: "50% 30%", pere: "male", mere: "triksy", portee: "p2025jan" }
 };
 
 const PORTEES = {
-p2026: { nom: "Portée 2026", role: "La portée du moment", pere: "pere", mere: "mere", chiots: ["c1","c2","c3","c4","c5","c6"], naissance: null }
+p2026tya: { nom: "Portée de Tya", date: "Octobre 2026", mere: "tya", pere: "male", nb: 6, photo: "tya-chiots.webp", pos: "50% 50%", texte: "Six chiots nés chez Tya, la fille de Triksy.", groupe: "oct2026", chiots: [] },
+p2026triksy: { nom: "Portée de Triksy", date: "Octobre 2026", mere: "triksy", pere: "male", nb: 9, photo: "triksy-portee.webp", pos: "50% 50%", texte: "Neuf chiots nés le 16 octobre 2026 à la maison.", groupe: "oct2026", chiots: [] },
+p2026tineky: { nom: "Portée de Tineky", date: "Avril 2026", mere: "tineky", pere: "male", nb: 7, lof: true, photo: "tineky.webp", pos: "60% 40%", texte: "Deuxième portée de Tineky : sept chiots LOF, nés fin avril.", chiots: ["tineky_fils"] },
+p2026acacia: { nom: "Portée d’Acacia", date: "Avril 2026", mere: "acacia", pere: "male", nb: null, photo: "p2026-avril.webp", pos: "50% 60%", texte: "Première portée de la princesse Acacia.", chiots: ["acacia_fils", "acacia_fille"] },
+p2025sept: { nom: "Portée de Triksy", date: "Septembre 2025", mere: "triksy", pere: "male", nb: 6, detail: "3 mâles et 3 femelles", photo: "p2025-triksy-sept.webp", pos: "50% 50%", texte: "Six chiots, trois mâles et trois femelles.", chiots: ["aika"] },
+p2025tineky: { nom: "Portée de Tineky", date: "Hiver 2025", mere: "tineky", pere: "male", nb: null, photo: "p2025-tineky.webp", pos: "50% 40%", texte: "Première portée de Tineky, présentée en mars 2025.", chiots: ["ayden", "audi", "akira"] },
+p2025jan: { nom: "Portée de Triksy", date: "Janvier 2025", mere: "triksy", pere: "male", nb: null, photo: "p2025-triksy.webp", pos: "50% 50%", texte: "Les premiers chiots de Triksy au domaine.", chiots: ["volt", "oka", "vanille", "noisette", "aquarelle"] }
 };
 
+const FEMELLES = ["triksy", "tineky", "acacia", "tya", "femelle5"];
+const DISPO = ["d1", "d2", "d3", "d4", "d5", "d6", "d7", "d8"];
+
 const PROFONDEUR = 3;
-let racine = "p2026";
+let racine = "p2026triksy";
 let selection = null;
 
 const el = (tag, cls, html) => { const n = document.createElement(tag); if (cls) n.className = cls; if (html != null) n.innerHTML = html; return n; };
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const sexeTxt = s => s === "M" ? "Mâle" : s === "F" ? "Femelle" : null;
 const sexeSym = s => s === "M" ? "♂" : s === "F" ? "♀" : "";
+const nomDe = id => CHIENS[id] ? (CHIENS[id].nom || (id === "male" ? "Notre mâle" : "Prénom à venir")) : "Inconnu";
+const nbTxt = p => p.nb ? p.nb + " chiots" : "Nombre à compléter";
 
 function visuel(c, grand) {
-  if (c && c.photo) {
-    const z = c.zoom && !grand ? `transform:scale(${c.zoom});transform-origin:${c.pos};` : "";
-    return `<img src="${PHOTOS + c.photo}" alt="" style="object-position:${c.pos || "50% 50%"};${z}" loading="lazy">`;
-  }
+  if (c && c.photo) return `<img src="${PHOTOS + c.photo}" alt="" style="object-position:${c.pos || "50% 50%"}" loading="lazy">`;
   const fond = c && c.robe && ROBES[c.robe] ? ROBES[c.robe] : ROBE_INCONNUE;
   return `<div class="pelage" style="background:${fond}"></div>`;
 }
@@ -462,13 +584,12 @@ function visuel(c, grand) {
 function carte(id, gen) {
   const c = CHIENS[id] || { role: "Ascendant" };
   const b = el("button", "carte g" + gen);
-  if (!CHIENS[id]) { b.disabled = true; b.style.cursor = "default"; b.style.opacity = ".6"; }
   b.type = "button";
   b.dataset.id = id;
+  if (!CHIENS[id]) { b.disabled = true; b.style.cursor = "default"; b.style.opacity = ".6"; }
   if (selection === id) b.classList.add("active");
-  const nom = c.nom ? `<span class="nom">${esc(c.nom)}</span>` : `<span class="nom vide">Nom à compléter</span>`;
-  const robe = c.robe || "Robe à compléter";
-  b.innerHTML = `<span class="rond">${visuel(c)}</span><span class="txt"><span class="role">${esc(c.role || "")}</span>${nom}<span class="det">${c.sexe ? `<span class="sexe">${sexeSym(c.sexe)}</span>` : ""}${esc(robe)}</span></span>`;
+  const nom = c.nom ? `<span class="nom">${esc(c.nom)}</span>` : `<span class="nom vide">${id === "male" ? "Prénom à venir" : "Nom à compléter"}</span>`;
+  b.innerHTML = `<span class="rond">${visuel(c)}</span><span class="txt"><span class="role">${esc(c.role || "")}</span>${nom}<span class="det">${c.sexe ? `<span class="sexe">${sexeSym(c.sexe)}</span>` : ""}${esc(c.robe || "Robe à compléter")}</span></span>`;
   if (CHIENS[id]) b.addEventListener("click", () => ouvrirFiche(id));
   return b;
 }
@@ -477,8 +598,11 @@ function cartePortee(pid) {
   const p = PORTEES[pid];
   const b = el("button", "carte portee-carte g0");
   b.type = "button";
-  const minis = p.chiots.map(id => `<img src="${PHOTOS + CHIENS[id].photo}" alt="" style="object-position:${CHIENS[id].pos}">`).join("");
-  b.innerHTML = `<span class="role">${esc(p.role)}</span><span class="nom">${esc(p.nom)}</span><span class="det">${p.chiots.length} chiots</span><span class="mini">${minis}</span>`;
+  const avec = p.chiots.filter(id => CHIENS[id].photo);
+  const visu = avec.length
+    ? `<span class="mini">${avec.slice(0, 6).map(id => `<img src="${PHOTOS + CHIENS[id].photo}" alt="" style="object-position:${CHIENS[id].pos}">`).join("")}</span>`
+    : `<span class="bande"><img src="${PHOTOS + p.photo}" alt="" style="object-position:${p.pos}"></span>`;
+  b.innerHTML = `<span class="role">${esc(p.date)}</span><span class="nom">${esc(p.nom)}</span><span class="det">${esc(nbTxt(p))}${p.lof ? " · LOF" : ""}</span>${visu}`;
   b.addEventListener("click", () => ouvrirFichePortee(pid));
   return b;
 }
@@ -498,6 +622,12 @@ function branche(id, gen) {
 
 const petitEcran = window.matchMedia("(max-width:760px)");
 
+function titresArbre() {
+  return PORTEES[racine]
+    ? ["La portée", "Les parents", "Les aïeux", "Les ancêtres"]
+    : [nomDe(racine), "Ses parents", "Ses aïeux", "Ses ancêtres"];
+}
+
 function rendreMobile(titres) {
   const zone = document.getElementById("arbreMobile");
   zone.innerHTML = "";
@@ -507,7 +637,7 @@ function rendreMobile(titres) {
   tete.appendChild(PORTEES[racine] ? cartePortee(racine) : (() => { const c = carte(racine, 0); c.classList.add("gm"); c.style.width = "100%"; return c; })());
   zone.appendChild(tete);
   const depart = PORTEES[racine] || CHIENS[racine];
-  let gen = [depart.pere, depart.mere];
+  let gen = [depart.pere || null, depart.mere || null];
   for (let g = 1; g <= PROFONDEUR; g++) {
     const sec = el("section");
     sec.appendChild(el("h5", null, esc(titres[g])));
@@ -526,78 +656,57 @@ function rendreMobile(titres) {
 }
 
 function rendreArbre() {
-  const titresM = PORTEES[racine]
-    ? ["La portée", "Les parents", "Les aïeux", "Les ancêtres"]
-    : [CHIENS[racine].nom ? CHIENS[racine].nom : CHIENS[racine].role, "Ses parents", "Ses aïeux", "Ses ancêtres"];
-  if (petitEcran.matches) {
-    rendreMobile(titresM);
-    document.querySelectorAll("#racines .puce").forEach(p => p.setAttribute("aria-pressed", p.dataset.racine === racine ? "true" : "false"));
-    return;
-  }
+  document.getElementById("choixRacine").value = racine;
+  const titres = titresArbre();
+  if (petitEcran.matches) { rendreMobile(titres); return; }
   document.getElementById("arbreMobile").hidden = true;
   const zone = document.getElementById("arbreRendu");
   zone.innerHTML = "";
   const racineBr = el("div", "branche g0");
-  let decal = 0;
-  if (PORTEES[racine]) {
-    const p = PORTEES[racine];
-    racineBr.appendChild(cartePortee(racine));
-    const enf = el("div", "enfants");
-    enf.appendChild(branche(p.pere, 1));
-    enf.appendChild(branche(p.mere, 1));
-    racineBr.appendChild(enf);
-  } else {
-    const c = CHIENS[racine];
-    racineBr.appendChild(carte(racine, 0));
-    const enf = el("div", "enfants");
-    enf.appendChild(branche(c.pere, 1));
-    enf.appendChild(branche(c.mere, 1));
-    racineBr.appendChild(enf);
-    decal = 1;
-  }
+  const depart = PORTEES[racine] || CHIENS[racine];
+  racineBr.appendChild(PORTEES[racine] ? cartePortee(racine) : carte(racine, 0));
+  const enf = el("div", "enfants");
+  enf.appendChild(branche(depart.pere || null, 1));
+  enf.appendChild(branche(depart.mere || null, 1));
+  racineBr.appendChild(enf);
   zone.appendChild(racineBr);
-  const titres = PORTEES[racine]
-    ? ["La portée", "Les parents", "Les aïeux", "Les ancêtres"]
-    : [CHIENS[racine].nom ? CHIENS[racine].nom : CHIENS[racine].role, "Ses parents", "Ses aïeux", "Ses ancêtres"];
   const cols = document.getElementById("colonnes");
   cols.innerHTML = "";
-  const largeurs = [...zone.querySelectorAll(".branche.g0 > .carte")].concat(
-    [1, 2, 3].map(g => zone.querySelector(".carte.g" + g))
-  );
+  const refs = [zone.querySelector(".branche.g0 > .carte"), ...[1, 2, 3].map(g => zone.querySelector(".carte.g" + g))];
   titres.forEach((t, i) => {
     const s = el("span", null, esc(t));
-    const ref = largeurs[i];
-    if (ref) s.style.width = ref.offsetWidth + "px";
+    if (refs[i]) s.style.width = refs[i].offsetWidth + "px";
     cols.appendChild(s);
   });
-  const ecart = parseFloat(getComputedStyle(zone.querySelector(".enfants")).paddingLeft);
-  cols.style.gap = ecart + "px";
-  document.querySelectorAll("#racines .puce").forEach(p => p.setAttribute("aria-pressed", p.dataset.racine === racine ? "true" : "false"));
+  cols.style.gap = parseFloat(getComputedStyle(zone.querySelector(".enfants")).paddingLeft) + "px";
   document.getElementById("defile").scrollLeft = 0;
 }
 
 function changerRacine(id, defiler) {
   racine = id;
-  if (!document.querySelector(`#racines .puce[data-racine="${id}"]`)) ajouterPuce(id);
   rendreArbre();
   if (defiler) document.getElementById("arbre").scrollIntoView({ behavior: "smooth" });
 }
 
-function ajouterPuce(id) {
-  const zone = document.getElementById("racines");
-  const nom = PORTEES[id] ? PORTEES[id].nom : (CHIENS[id].nom ? (CHIENS[id].role === "Chiot de la portée" ? "Chiot " + CHIENS[id].nom : CHIENS[id].nom) : CHIENS[id].role);
-  const b = el("button", "puce", esc(nom));
-  b.type = "button";
-  b.dataset.racine = id;
-  b.addEventListener("click", () => changerRacine(id));
-  zone.appendChild(b);
+function remplirChoix() {
+  const s = document.getElementById("choixRacine");
+  const g1 = el("optgroup"); g1.label = "Les portées";
+  Object.entries(PORTEES).forEach(([id, p]) => { const o = el("option", null, esc(p.nom + ", " + p.date.toLowerCase())); o.value = id; g1.appendChild(o); });
+  const g2 = el("optgroup"); g2.label = "Les femelles";
+  FEMELLES.forEach(id => { const o = el("option", null, esc(CHIENS[id].nom || "Cinquième femelle")); o.value = id; g2.appendChild(o); });
+  const g3 = el("optgroup"); g3.label = "Le mâle";
+  const o = el("option", null, "Notre mâle reproducteur"); o.value = "male"; g3.appendChild(o);
+  const g4 = el("optgroup"); g4.label = "Les chiots";
+  Object.keys(CHIENS).filter(id => CHIENS[id].role === "Chiot" || CHIENS[id].role === "Chiot disponible").forEach(id => { const op = el("option", null, esc(CHIENS[id].nom)); op.value = id; g4.appendChild(op); });
+  s.append(g1, g2, g3, g4);
+  s.addEventListener("change", () => changerRacine(s.value));
 }
 
 function ligne(dt, dd) {
   return dd ? `<dt>${dt}</dt><dd>${esc(dd)}</dd>` : `<dt>${dt}</dt><dd class="vide">À compléter</dd>`;
 }
 
-function enfantsDe(id) {
+function porteesDe(id) {
   return Object.entries(PORTEES).filter(([, p]) => p.pere === id || p.mere === id);
 }
 
@@ -610,19 +719,8 @@ function remplirFiche(hautHtml, contenuHtml) {
   document.getElementById("fiche").setAttribute("aria-hidden", "false");
   document.getElementById("fiche").scrollTop = 0;
   document.getElementById("fermerFiche").focus({ preventScroll: true });
-}
-
-function brancherListes() {
-  document.querySelectorAll("#ficheContenu [data-fiche]").forEach(n => {
-    const id = n.dataset.fiche;
-    const c = carte(id, 1);
-    n.replaceWith(c);
-  });
-  document.querySelectorAll("#ficheContenu [data-portee]").forEach(n => {
-    const c = cartePortee(n.dataset.portee);
-    c.style.width = "100%";
-    n.replaceWith(c);
-  });
+  document.querySelectorAll("#ficheContenu [data-fiche]").forEach(n => n.replaceWith(carte(n.dataset.fiche, 1)));
+  document.querySelectorAll("#ficheContenu [data-portee]").forEach(n => { const c = cartePortee(n.dataset.portee); c.style.width = "100%"; n.replaceWith(c); });
   document.querySelectorAll("#ficheContenu [data-lignee]").forEach(n => n.addEventListener("click", () => { fermerFiche(); changerRacine(n.dataset.lignee, true); }));
 }
 
@@ -632,36 +730,35 @@ function ouvrirFiche(id) {
   document.querySelectorAll(".carte.active").forEach(n => n.classList.remove("active"));
   document.querySelectorAll(`.carte[data-id="${id}"]`).forEach(n => n.classList.add("active"));
   const c = CHIENS[id];
-  const haut = c.photo ? visuel(c, true) : `${visuel(c, true)}<span class="mono">${c.sexe === "F" ? "♀" : c.sexe === "M" ? "♂" : "FS"}</span>`;
-  const titre = c.nom ? `<h3>${esc(c.nom)}</h3>` : `<h3 class="vide">Nom à compléter</h3>`;
+  const haut = c.photo ? visuel(c, true) : `${visuel(c, true)}<span class="mono">${sexeSym(c.sexe) || "FS"}</span>`;
+  const titre = c.nom ? `<h3>${esc(c.nom)}</h3>` : `<h3 class="vide">${id === "male" ? "Prénom à venir" : "Nom à compléter"}</h3>`;
   let html = `<span class="role">${esc(c.role || "")}</span>${titre}`;
   if (c.texte) html += `<p class="resume">${esc(c.texte)}</p>`;
-  html += `<dl>${ligne("Sexe", sexeTxt(c.sexe))}${ligne("Robe", c.robe)}${ligne("Yeux", c.yeux)}${ligne("Naissance", c.naissance)}${ligne("N° LOF", c.lof)}${ligne("Puce", c.puce)}${ligne("Tests santé", c.sante)}${c.statut ? ligne("Statut", c.statut) : ""}</dl>`;
-  if (c.pere || c.mere) {
+  const portees = porteesDe(id);
+  html += `<dl>${ligne("Sexe", sexeTxt(c.sexe))}${ligne("Robe", c.robe)}${ligne("Naissance", c.naissance)}${ligne("N° LOF", c.lof)}${ligne("Tests santé", c.sante)}${portees.length ? ligne("Portées", portees.length + (portees.length > 1 ? " portées" : " portée")) : ""}${c.statut ? ligne("Statut", c.statut) : ""}</dl>`;
+  if (c.groupe === "oct2026") {
+    html += `<h4>Ses parents</h4><p class="resume">Né en octobre 2026, de notre mâle et de Triksy ou de Tya : la maman sera précisée sur sa fiche définitive.</p><div class="liste"><span data-fiche="male"></span><span data-portee="p2026triksy"></span><span data-portee="p2026tya"></span></div>`;
+  } else if (c.pere || c.mere) {
     html += `<h4>Ses parents</h4><div class="liste">${c.pere ? `<span data-fiche="${c.pere}"></span>` : ""}${c.mere ? `<span data-fiche="${c.mere}"></span>` : ""}</div>`;
   }
-  const portees = enfantsDe(id);
-  if (portees.length) {
-    html += `<h4>Ses portées</h4><div class="liste">${portees.map(([pid]) => `<span data-portee="${pid}"></span>`).join("")}</div>`;
-  }
+  if (portees.length) html += `<h4>Ses portées</h4><div class="liste">${portees.map(([pid]) => `<span data-portee="${pid}"></span>`).join("")}</div>`;
   if (c.portee) {
     const freres = PORTEES[c.portee].chiots.filter(x => x !== id);
-    html += `<h4>Frères et sœurs</h4><div class="liste">${freres.map(x => `<span data-fiche="${x}"></span>`).join("")}</div>`;
+    if (freres.length) html += `<h4>Frères et sœurs</h4><div class="liste">${freres.map(x => `<span data-fiche="${x}"></span>`).join("")}</div>`;
   }
   html += `<div class="actions"><button class="btn" type="button" data-lignee="${id}">Afficher sa lignée</button>${c.statut === "Disponible" ? `<a class="lien-serif" href="#contact" onclick="fermerFiche()">Demander des nouvelles de ce chiot</a>` : ""}</div>`;
   remplirFiche(haut, html);
-  brancherListes();
 }
 
 function ouvrirFichePortee(pid) {
   const p = PORTEES[pid];
-  const minis = p.chiots.map(id => `<img src="${PHOTOS + CHIENS[id].photo}" alt="" style="width:33.34%;height:50%;float:left;object-fit:cover;object-position:${CHIENS[id].pos}">`).join("");
-  let html = `<span class="role">${esc(p.role)}</span><h3>${esc(p.nom)}</h3><p class="resume">Six chiots nés à la maison, de la même mère et du même père.</p>`;
-  html += `<dl>${ligne("Naissance", p.naissance)}${ligne("Chiots", p.chiots.length + " chiots")}${ligne("Disponibles", p.chiots.filter(x => CHIENS[x].statut === "Disponible").length + " chiots")}</dl>`;
+  let html = `<span class="role">${esc(p.date)}</span><h3>${esc(p.nom)}</h3><p class="resume">${esc(p.texte)}</p>`;
+  html += `<dl>${ligne("Date", p.date)}${ligne("Chiots", p.nb ? p.nb + " chiots" : null)}${p.detail ? ligne("Détail", p.detail) : ""}${ligne("LOF", p.lof ? "Oui" : null)}</dl>`;
   html += `<h4>Les parents</h4><div class="liste"><span data-fiche="${p.pere}"></span><span data-fiche="${p.mere}"></span></div>`;
-  html += `<h4>Les chiots</h4><div class="liste">${p.chiots.map(x => `<span data-fiche="${x}"></span>`).join("")}</div>`;
-  remplirFiche(`<div style="position:absolute;inset:0">${minis}</div>`, html);
-  brancherListes();
+  const chiots = p.groupe === "oct2026" ? DISPO : p.chiots;
+  if (chiots.length) html += `<h4>${p.groupe === "oct2026" ? "Les chiots disponibles d’octobre 2026" : "Les chiots que l’on connaît"}</h4><div class="liste">${chiots.map(x => `<span data-fiche="${x}"></span>`).join("")}</div>`;
+  html += `<div class="actions"><button class="btn" type="button" data-lignee="${pid}">Afficher l’arbre de la portée</button></div>`;
+  remplirFiche(`<img src="${PHOTOS + p.photo}" alt="" style="object-position:${p.pos}">`, html);
 }
 
 function fermerFiche() {
@@ -669,16 +766,61 @@ function fermerFiche() {
   document.getElementById("fiche").setAttribute("aria-hidden", "true");
 }
 
-function rendrePortee() {
-  const g = document.getElementById("grillePortee");
-  PORTEES.p2026.chiots.forEach(id => {
+function rendreDispo() {
+  const g = document.getElementById("grilleDispo");
+  DISPO.forEach(id => {
     const c = CHIENS[id];
     const a = el("article", "chiot");
-    const z = c.zoom ? `transform:scale(${c.zoom});transform-origin:${c.pos};` : "";
-    a.innerHTML = `<div class="photo"><img src="${PHOTOS + c.photo}" alt="Chiot ${esc(c.robe.toLowerCase())}" style="object-position:${c.pos};${z}" loading="lazy"></div>
-<div class="ligne"><span class="num">${esc(c.nom)}</span><span class="robe">${esc(c.robe)}</span><span class="statut${c.statut === "Réservé" ? " reserve" : ""}"><i></i>${esc(c.statut)}</span></div>
-<button class="voir-lignee" type="button" data-racine="${id}">Voir ses parents et sa lignée</button>`;
+    a.innerHTML = `<button type="button" class="photo" data-fiche-ouvrir="${id}" aria-label="Fiche du ${esc(c.nom)}"><img src="${PHOTOS + c.photo}" alt="${esc(c.nom)}, ${esc(c.robe.toLowerCase())}" style="object-position:${c.pos}" loading="lazy"></button>
+<div class="ligne"><span class="num">${esc(c.nom.replace("Chiot ", ""))}</span><span class="robe">${esc(c.robe)}</span><span class="statut${c.statut === "Réservé" ? " reserve" : ""}"><i></i>${esc(c.statut)}</span></div>
+<button class="voir-lignee" type="button" data-fiche-ouvrir="${id}">Voir sa fiche et ses parents</button>`;
     g.appendChild(a);
+  });
+}
+
+function rendreFemelles() {
+  const g = document.getElementById("grilleFemelles");
+  FEMELLES.forEach(id => {
+    const c = CHIENS[id];
+    const portees = porteesDe(id);
+    const derniere = portees.length ? portees[0][1].date : null;
+    const a = el("article", "femelle");
+    const img = c.photo
+      ? `<img src="${PHOTOS + c.photo}" alt="${esc(c.nom || "Femelle du domaine")}" style="object-position:${c.pos}" loading="lazy">${c.legende ? `<span class="legende-photo">${esc(c.legende)}</span>` : ""}`
+      : `<div class="pelage" style="background:${ROBE_INCONNUE}"></div><span class="mono">♀</span>`;
+    a.innerHTML = `<button type="button" class="visuel" data-fiche-ouvrir="${id}" aria-label="Fiche de ${esc(c.nom || "la cinquième femelle")}">${img}</button>
+<div class="infos"><h3 class="${c.nom ? "" : "vide"}">${esc(c.nom || "Prénom à venir")}</h3>
+<span class="robe-txt">${esc(c.robe || "Robe à compléter")}${c.mere ? " · fille de " + esc(nomDe(c.mere)) : ""}</span>
+<span class="compte">${portees.length ? portees.length + (portees.length > 1 ? " portées" : " portée") + ", la dernière en " + esc(derniere.toLowerCase()) : "Portées à compléter"}</span></div>
+<button type="button" class="voir-lignee" data-fiche-ouvrir="${id}">Sa fiche et ses portées</button>`;
+    g.appendChild(a);
+  });
+}
+
+function rendreChiffresMale() {
+  const portees = porteesDe("male");
+  const connus = portees.reduce((s, [, p]) => s + (p.nb || 0), 0);
+  const meres = new Set(portees.map(([, p]) => p.mere)).size;
+  document.getElementById("chiffresMale").innerHTML =
+    `<span><b>${portees.length}</b>portées</span><span><b>${meres}</b>mamans</span><span><b>${connus}+</b>chiots</span>`;
+}
+
+function rendreFrise() {
+  const f = document.getElementById("frise");
+  Object.entries(PORTEES).forEach(([pid, p]) => {
+    const li = el("li", "etape");
+    const noms = p.chiots.map(id => `<button type="button" class="puce" data-fiche-ouvrir="${id}">${esc(CHIENS[id].nom)}</button>`).join("");
+    li.innerHTML = `<div class="quand"><span class="mois">${esc(p.date.split(" ")[0])}</span><span class="an">${esc(p.date.split(" ")[1])}</span></div>
+<div class="carte-frise">
+<button type="button" class="image" data-portee-ouvrir="${pid}"><img src="${PHOTOS + p.photo}" alt="${esc(p.nom)}" style="object-position:${p.pos}" loading="lazy"></button>
+<div class="corps-frise">
+<h3>${esc(p.nom)}${p.lof ? ' <span class="lof">LOF</span>' : ""}</h3>
+<p class="parents-frise"><button type="button" data-fiche-ouvrir="${p.mere}">${esc(nomDe(p.mere))}</button> et <button type="button" data-fiche-ouvrir="${p.pere}">notre mâle</button></p>
+<p class="texte-frise">${esc(p.texte)}${p.nb ? "" : " Nombre de chiots à compléter."}</p>
+${noms ? `<div class="noms">${noms}</div>` : ""}
+<button type="button" class="voir-lignee" data-racine="${pid}">Voir l’arbre de cette portée</button>
+</div></div>`;
+    f.appendChild(li);
   });
 }
 
@@ -687,12 +829,22 @@ function rendreLegende() {
   document.getElementById("legende").innerHTML = robes.map(r => `<span><i class="pastille" style="background:${ROBES[r]}"></i><b>${r}</b></span>`).join("") + `<span><i class="pastille" style="background:${ROBE_INCONNUE}"></i>Robe à compléter</span>`;
 }
 
-rendrePortee();
+rendreDispo();
+rendreFemelles();
+rendreChiffresMale();
+rendreFrise();
 rendreLegende();
-["p2026", "mere", "pere"].forEach(ajouterPuce);
+remplirChoix();
 rendreArbre();
 
-document.querySelectorAll(".voir-lignee[data-racine]").forEach(b => b.addEventListener("click", () => changerRacine(b.dataset.racine, true)));
+document.addEventListener("click", e => {
+  const f = e.target.closest("[data-fiche-ouvrir]");
+  if (f) { ouvrirFiche(f.dataset.ficheOuvrir); return; }
+  const p = e.target.closest("[data-portee-ouvrir]");
+  if (p) { ouvrirFichePortee(p.dataset.porteeOuvrir); return; }
+  const r = e.target.closest("[data-racine]");
+  if (r && !r.closest(".fiche")) changerRacine(r.dataset.racine, true);
+});
 document.getElementById("fermerFiche").addEventListener("click", fermerFiche);
 document.getElementById("voileFiche").addEventListener("click", fermerFiche);
 document.addEventListener("keydown", e => { if (e.key === "Escape") fermerFiche(); });

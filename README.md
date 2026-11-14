@@ -12,7 +12,7 @@ Puis ouvrir http://localhost:8000
 
 ## Arbre généalogique
 
-Dans `index.html`, les chiens sont décrits dans l’objet `CHIENS` (nom, robe, yeux, LOF, photo, père, mère) et les portées dans `PORTEES`. Remplir un champ suffit : l’arbre, les fiches et la version mobile se mettent à jour seuls.
+Dans `index.html`, les chiens sont décrits dans l’objet `CHIENS` (nom, robe, LOF, photo, père, mère, statut) et les portées dans `PORTEES` (date, mère, père, nombre de chiots, chiots connus). Les cinq femelles sont listées dans `FEMELLES` et les chiots disponibles dans `DISPO`. Remplir un champ suffit : l’arbre, les fiches et la version mobile se mettent à jour seuls.
 
 ## Mettre en ligne avec GitHub Pages
 
