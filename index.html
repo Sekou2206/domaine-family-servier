@@ -285,8 +285,8 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 .chiffres{display:flex;flex-wrap:wrap;gap:36px;border-top:1px solid rgba(194,160,106,.4);padding-top:22px}
 .chiffres span{display:flex;flex-direction:column;font-size:14px;color:#C9CFC6}
 .chiffres b{font-family:var(--serif);font-weight:400;font-size:52px;line-height:1;color:var(--or2)}
-.vignettes{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px}
-.vignettes img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.vignettes{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;max-width:520px}
+.vignettes img{width:100%;aspect-ratio:3/4;object-fit:cover}
 
 .historique{background:var(--lin)}
 .historique .wrap{padding-top:120px;padding-bottom:120px;display:flex;flex-direction:column;gap:56px}
@@ -371,6 +371,12 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 .femelle:nth-child(even) .visuel{order:0}
 .femelle .visuel{aspect-ratio:4/4.4}
 }
+.nes{display:flex;flex-direction:column;gap:14px}
+.nes-titre{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--or2)}
+.nes-photos{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.nes-photos img{width:100%;aspect-ratio:1;object-fit:cover}
+@media (max-width:1000px){.nes-photos{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.nes-photos{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -419,8 +425,9 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <p class="corps">C’est lui le papa de toutes les portées du domaine. Un chien rouge au caractère doux, proche de l’humain, qui transmet à ses chiots son équilibre et sa joie de vivre.</p>
 <div class="chiffres" id="chiffresMale"></div>
 <div class="vignettes">
-<img src="assets/male-montagne.webp" alt="Le mâle couché dans l’herbe en montagne" style="object-position:50% 70%">
-<img src="assets/male-soleil.webp" alt="Le mâle dans un champ au coucher du soleil" style="object-position:50% 70%">
+<img src="assets/male-riviere.webp" alt="Le mâle dans l’eau d’une rivière" style="object-position:50% 45%">
+<img src="assets/male-montagne.webp" alt="Le mâle couché dans l’herbe en montagne" style="object-position:50% 65%">
+<img src="assets/male-soleil.webp" alt="Le mâle au coucher du soleil sur un chemin" style="object-position:50% 40%">
 </div>
 <div class="btns"><button type="button" class="btn" data-fiche-ouvrir="male">Sa fiche et ses portées</button></div>
 </div>
@@ -446,6 +453,17 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <div class="entete">
 <h2>Les chiots,<br><em>disponibles maintenant.</em></h2>
 <p>Nés en octobre 2026 chez Triksy et chez sa fille Tya. Leurs premières sorties au jardin datent de novembre : ils sont prêts à rencontrer leur famille.</p>
+</div>
+<div class="nes">
+<span class="nes-titre">Les tout derniers nés, encore au chaud</span>
+<div class="nes-photos">
+<img src="assets/nes-1.webp" alt="Chiots merle endormis contre des peluches" loading="lazy">
+<img src="assets/nes-2.webp" alt="Chiots noirs et chocolat endormis contre des peluches" loading="lazy">
+<img src="assets/nes-3.webp" alt="Chiots noirs et blancs endormis en tas" loading="lazy">
+<img src="assets/nes-4.webp" alt="Deux chiots chocolat et blanc endormis" loading="lazy">
+<img src="assets/nes-5.webp" alt="Portrait d’un chiot merle aux yeux bleus" loading="lazy">
+<img src="assets/nes-6.webp" alt="Chiot noir et blanc sur une couverture rose" loading="lazy">
+</div>
 </div>
 <div class="grille" id="grilleDispo"></div>
 <div class="btns">
@@ -489,7 +507,7 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <div class="wrap">
 <h2>Huit semaines <em>avant de partir</em></h2>
 <ol>
-<li><div><img src="assets/p2025-triksy-sept.webp" alt="Chiot merle nouveau né endormi"></div><span>La naissance</span><p>Au calme, à la maison, contre leur mère.</p></li>
+<li><div><img src="assets/nes-1.webp" alt="Chiots nouveau nés endormis contre des peluches"></div><span>La naissance</span><p>Au calme, à la maison, contre leur mère.</p></li>
 <li><div><img src="assets/dispo-4.webp" alt="Chiot dans sa caisse avec une peluche" style="object-position:40% 50%"></div><span>Les premières semaines</span><p>Les yeux s’ouvrent, les caractères se dessinent.</p></li>
 <li><div><img src="assets/dispo-1.webp" alt="Chiot rouge tricolore lors de sa première sortie au jardin" style="object-position:40% 60%"></div><span>Les premiers pas dehors</span><p>L’herbe, le froid, les jeux entre frères et sœurs.</p></li>
 <li><div><img src="assets/audi.webp" alt="Audi, fils de Tineky, dans sa nouvelle famille"></div><span>Le départ</span><p>Avec ses papiers, son carnet de santé, ses repères et son arbre généalogique.</p></li>
@@ -519,6 +537,8 @@ footer .liens-bas{display:flex;flex-wrap:wrap;gap:22px}
 <figure><div><img src="assets/chiots-dehors.webp" alt="Les chiots jouent ensemble dans le jardin" style="object-position:40% 50%"></div><figcaption>Première sortie, il faisait froid mais ils ont été très courageux.</figcaption></figure>
 <figure><div><img src="assets/ayden.webp" alt="Ayden dans les bras de sa nouvelle famille"></div><figcaption>Ayden, fils de Tineky, avec sa nouvelle famille.</figcaption></figure>
 <figure><div><img src="assets/vanille.webp" alt="Vanille, fille de Triksy, bleu merle"></div><figcaption>Vanille, fille de Triksy. Wouah.</figcaption></figure>
+<figure><div><img src="assets/maman-chiots-1.webp" alt="Une maman du domaine veille sur ses chiots" style="object-position:50% 60%"></div><figcaption>Une maman qui veille sur sa portée.</figcaption></figure>
+<figure><div><img src="assets/maman-chiots-2.webp" alt="Une maman endormie avec ses nouveau nés dans leur parc"></div><figcaption>Les premiers jours, au calme dans le parc.</figcaption></figure>
 <figure><div><img src="assets/tineky-fils.webp" alt="Le fils de Tineky, bleu merle" style="object-position:50% 35%"></div><figcaption>Le fils de Tineky, portée d’avril 2026.</figcaption></figure>
 </div>
 </div>
@@ -570,11 +590,11 @@ const ROBE_INCONNUE = "repeating-linear-gradient(45deg,#E9E2D3 0 6px,#DCD2BF 6px
 
 const CHIENS = {
 male: { nom: null, role: "Mâle reproducteur", sexe: "M", robe: "Rouge", photo: "male-porte.webp", pos: "50% 40%", texte: "Il adore l’eau, il est très joueur, très intelligent et surtout il adore les câlins. C’est le papa de toutes les portées du domaine." },
-triksy: { nom: "Triksy", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "triksy.webp", pos: "50% 60%", texte: "La princesse du domaine, maman de Tya. Trois portées depuis janvier 2025, dont neuf chiots en octobre 2026." },
-tineky: { nom: "Tineky", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "tineky.webp", pos: "60% 40%", texte: "Douce et patiente avec ses petits. Sa deuxième portée, en avril 2026, est LOF." },
-acacia: { nom: "Acacia", role: "Femelle du domaine", sexe: "F", robe: null, photo: "acacia.webp", pos: "50% 70%", texte: "La princesse Acacia a eu sa première portée au printemps 2026." },
-tya: { nom: "Tya", role: "Femelle du domaine", sexe: "F", robe: null, photo: "tya-chiots.webp", pos: "50% 50%", legende: "Ses chiots, octobre 2026", mere: "triksy", texte: "Fille de Triksy, la deuxième génération du domaine. Sa portée est née en octobre 2026." },
-akira: { nom: "Akira", role: "Femelle du domaine", sexe: "F", robe: null, photo: null, pere: "male", mere: "tineky", portee: "p2025tineky", texte: "La petite dernière du domaine, fille de Tineky. Elle commence tout juste sa vie de future maman et n’a pas encore eu de portée." },
+triksy: { nom: "Triksy", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "triksy.webp", pos: "35% 40%", texte: "La princesse du domaine, maman d’Acacia et de Tya. Trois portées depuis janvier 2025, dont neuf chiots en octobre 2026." },
+tineky: { nom: "Tineky", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", lof: "LOF confirmée", photo: "tineky.webp", pos: "70% 30%", texte: "Douce et patiente avec ses petits. Sa deuxième portée, en avril 2026, est LOF." },
+acacia: { nom: "Acacia", role: "Femelle du domaine", sexe: "F", robe: "Rouge tricolore", photo: "acacia.webp", pos: "50% 45%", mere: "triksy", texte: "Fille de Triksy et sœur de Tya. La princesse Acacia a eu dix chiots pour sa première portée." },
+tya: { nom: "Tya", role: "Femelle du domaine", sexe: "F", robe: "Noir tricolore", photo: "tya.webp", pos: "30% 50%", mere: "triksy", texte: "Fille de Triksy et sœur d’Acacia, la deuxième génération du domaine. Sa portée est née en octobre 2026." },
+akira: { nom: "Akira", role: "Femelle du domaine", sexe: "F", robe: "Bleu merle", lof: "LOF confirmée", photo: "akira.webp", pos: "50% 45%", pere: "male", mere: "tineky", portee: "p2025tineky", texte: "La petite dernière du domaine, fille de Tineky. Elle commence tout juste sa vie de future maman et n’a pas encore eu de portée." },
 
 d1: { nom: "Chiot 01", role: "Chiot disponible", robe: "Rouge tricolore", photo: "dispo-1.webp", pos: "35% 60%", statut: "Disponible", pere: "male", groupe: "oct2026" },
 d2: { nom: "Chiot 02", role: "Chiot disponible", robe: "Bleu merle", photo: "dispo-2.webp", pos: "45% 40%", statut: "Disponible", pere: "male", groupe: "oct2026" },
@@ -602,7 +622,7 @@ const PORTEES = {
 p2026tya: { nom: "Portée de Tya", date: "Octobre 2026", mere: "tya", pere: "male", nb: 6, photo: "tya-chiots.webp", pos: "50% 50%", texte: "Six chiots nés chez Tya, la fille de Triksy.", groupe: "oct2026", chiots: [] },
 p2026triksy: { nom: "Portée de Triksy", date: "Octobre 2026", mere: "triksy", pere: "male", nb: 9, photo: "triksy-portee.webp", pos: "50% 50%", texte: "Neuf chiots nés le 16 octobre 2026 à la maison.", groupe: "oct2026", chiots: [] },
 p2026tineky: { nom: "Portée de Tineky", date: "Avril 2026", mere: "tineky", pere: "male", nb: 7, lof: true, photo: "tineky.webp", pos: "60% 40%", texte: "Deuxième portée de Tineky : sept chiots LOF, nés fin avril.", chiots: ["tineky_fils"] },
-p2026acacia: { nom: "Portée d’Acacia", date: "Avril 2026", mere: "acacia", pere: "male", nb: null, photo: "p2026-avril.webp", pos: "50% 60%", texte: "Première portée de la princesse Acacia.", chiots: ["acacia_fils", "acacia_fille"] },
+p2026acacia: { nom: "Portée d’Acacia", date: "Avril 2026", mere: "acacia", pere: "male", nb: 10, photo: "acacia-portee.webp", pos: "50% 40%", texte: "Première portée de la princesse Acacia : dix chiots.", chiots: ["acacia_fils", "acacia_fille"] },
 p2025sept: { nom: "Portée de Triksy", date: "Septembre 2025", mere: "triksy", pere: "male", nb: 6, detail: "3 mâles et 3 femelles", photo: "p2025-triksy-sept.webp", pos: "50% 50%", texte: "Six chiots, trois mâles et trois femelles.", chiots: ["aika"] },
 p2025tineky: { nom: "Portée de Tineky", date: "Hiver 2025", mere: "tineky", pere: "male", nb: null, photo: "p2025-tineky.webp", pos: "50% 40%", texte: "Première portée de Tineky, présentée en mars 2025.", chiots: ["ayden", "audi", "akira"] },
 p2025jan: { nom: "Portée de Triksy", date: "Janvier 2025", mere: "triksy", pere: "male", nb: null, photo: "p2025-triksy.webp", pos: "50% 50%", texte: "Les premiers chiots de Triksy au domaine.", chiots: ["volt", "oka", "vanille", "noisette", "aquarelle"] }
@@ -796,7 +816,7 @@ function ouvrirFiche(id) {
   let html = `<span class="role">${esc(c.role || "")}</span>${titre}`;
   if (c.texte) html += `<p class="resume">${esc(c.texte)}</p>`;
   const portees = porteesDe(id);
-  html += `<dl>${ligne("Sexe", sexeTxt(c.sexe))}${ligne("Robe", c.robe)}${ligne("Naissance", c.naissance)}${ligne("N° LOF", c.lof)}${ligne("Tests santé", c.sante)}${portees.length ? ligne("Portées", portees.length + (portees.length > 1 ? " portées" : " portée")) : ""}${c.statut ? ligne("Statut", c.statut) : ""}</dl>`;
+  html += `<dl>${ligne("Sexe", sexeTxt(c.sexe))}${ligne("Robe", c.robe)}${ligne("Naissance", c.naissance)}${ligne("LOF", c.lof)}${ligne("Tests santé", c.sante)}${portees.length ? ligne("Portées", portees.length + (portees.length > 1 ? " portées" : " portée")) : ""}${c.statut ? ligne("Statut", c.statut) : ""}</dl>`;
   if (c.groupe === "oct2026") {
     html += `<h4>Ses parents</h4><p class="resume">Né en octobre 2026, de notre mâle et de Triksy ou de Tya : la maman sera précisée sur sa fiche définitive.</p><div class="liste"><span data-fiche="male"></span><span data-portee="p2026triksy"></span><span data-portee="p2026tya"></span></div>`;
   } else if (c.pere || c.mere) {
@@ -855,7 +875,8 @@ function rendreFemelles() {
       : `<div class="pelage" style="background:${ROBE_INCONNUE}"></div><span class="mono">♀<small>Photo à venir</small></span>`;
     const tags = [`<span class="fort">Femelle</span>`, `<span>${esc(c.robe || "Robe à compléter")}</span>`];
     if (c.mere) tags.push(`<span>Fille de ${esc(nomDe(c.mere))}</span>`);
-    if (portees.some(([, p]) => p.lof)) tags.push(`<span>Portée LOF</span>`);
+    if (c.lof) tags.push(`<span class="fort">${esc(c.lof)}</span>`);
+    else if (portees.some(([, p]) => p.lof)) tags.push(`<span>Portée LOF</span>`);
     const liste = portees.map(([pid, p]) => `<button type="button" data-portee-ouvrir="${pid}"><img src="${PHOTOS + p.photo}" alt="" style="object-position:${p.pos}"><span><b>${esc(p.date)}</b><small>${esc(p.nb ? p.nb + " chiots" : "Chiots à compter")}${p.lof ? " · LOF" : ""}</small></span></button>`).join("");
     a.innerHTML = `<button type="button" class="visuel" data-fiche-ouvrir="${id}" aria-label="Fiche de ${esc(c.nom || "la cinquième femelle")}">${img}</button>
 <div class="infos">
